@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Fraunces:wght@100&family=Outfit:wght@100&family=Prompt:wght@100&family=Space+Grotesk&display=swap');
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    font-family: 'Abril Fatface', cursive;
+    font-family: 'Fraunces', serif;
+    font-family: 'Outfit', sans-serif;
+    font-family: 'Prompt', sans-serif;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+
+:root {
+
+    --White: hsl(0, 0%, 100%);
+    --Light-grayish-violet: hsl(270, 3%, 87%);
+    --Dark-grayish-violet: hsl(279, 6%, 55%);
+    --Very-dark-violet: hsl(278, 68%, 11%);
+}
+
+
+
+main {
+    flex-grow: 1;
+}
+
+.container {
+    display: flex;
+    width: 80%;
+    height: 100vh;
+    margin: 10px auto;
+    background-color: var(--White);
+    box-shadow: 5px 7px 14px 1px rgba(115, 100, 100, 0.89);
+
+}
+
+.left-side {
+   
+    position: relative;
+}
+
+.image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-front {
+
+    background-image: url("images/bg-card-front.png");
+    background-position: center;
+    background-size: cover;
+    z-index: 1;
+    width: 447px;
+    height: 245px;
+    position: absolute;
+    top: 10%;
+    left: 20%;
+    padding: 2rem;
+}
+
+.card-number {
+    margin-top: 3rem;
+    color: var(--White);
+
+    font-weight: 500;
+    letter-spacing: .2rem;
+    font-size: 18px;
+}
+
+.card-holder-expiry {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    color: var(--White);
+}
+
+.card-back {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-image: url("images/bg-card-back.png");
+    background-position: center;
+    background-size: cover;
+    z-index: 1;
+    width: 447px;
+    height: 245px;
+    position: absolute;
+    top: 53%;
+    left: 40%;
+
+}
+
+#cvc-back-side {
+    color: var(--White);
+    margin-right: 3rem;
+}
+
+
+.right-side {
+    flex-basis: 70%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.getting-details {
+   position: relative;
+    width: 50%;
+    margin-right: 3rem;
+}
+
+
+
+.form-inputs {
+    margin-bottom: 1rem;
+}
+
+label {
+    display: block;
+    margin-bottom: .5rem;
+}
+
+input {
+    text-align: left;
+    width: 100%;
+    outline: none;
+    padding: .5rem;
+
+    border: 1px solid grey;
+    border-radius: 5px;
+}
+
+.error {
+   
+    visibility: hidden;
+}
+
+.date-cvc {
+    
+    display: flex;
+    justify-content: flex-start;
+}
+.date{
+    flex-basis: 50%;
+   
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+
+.date input {
+    width: 40%;
+    margin-right: 1rem;
+}
+
+.cvc{
+   
+    flex-basis: 50%;
+}
+
+
+
+
+#submitForm {
+    text-align: center;
+    margin-top: 1rem;
+    background-color: var(--Very-dark-violet);
+    color: white;
+}
+
+footer {
+    margin-top: auto;
+    background-color: var(--Dark-grayish-violet);
+    padding: 1rem 0rem;
+}
+
+
+.attribution {
+    font-size: 20px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+
+
+
+@media screen and (max-width: 375px) {
+
+    .container {
+        width: 100vw;
+        height: auto;
+        flex-direction: column;
+    }
+
+    .card-front {
+
+      
+        z-index: 2;
+        width: 320px;
+        height: 180px;
+        position: absolute;
+        top: 40%;
+        left: 2%;
+        padding: 2rem;
+    }
+
+    .card-back {
+
+        z-index: 1;
+        width: 299px;
+        height: 152px;
+        position: absolute;
+        top: 3%;
+        left: 18%;
+
+    }
+
+    .card-number {
+        margin-top: 1rem;
+        
+    }
+
+    .card-holder-expiry {
+        margin-top: 1rem;
+       
+    }
+
+
+    #cvc-back-side {
+        
+        margin-right: 2rem;
+    }
+
+    .right-side {
+  
+       flex-direction: column;
+       padding: 2rem 0rem;
+    }
+    
+    .getting-details {
+        position: relative;
+        width: 50%;
+        margin-top: 5rem;
+    }
+
+
+    .date-cvc {
+      flex-direction: column;
+    }
+
+}
